@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="cy-en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>misc zines — elena tayo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Figtree:ital,wght@0,400;0,600;0,800;1,400;1,600&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/subpage.css">
+</head>
+<body>
+
+<nav>
+  <div class="nav-links">
+    <a href="/">home</a>
+    <span class="nav-sep">//</span>
+    <a href="/#latest">latest</a>
+    <span class="nav-sep">//</span>
+    <a href="/#art">art</a>
+    <span class="nav-sep">//</span>
+    <a href="/#zines">zines</a>
+    <span class="nav-sep">//</span>
+    <a href="/#tarot">tarot</a>
+    <span class="nav-sep">//</span>
+    <a href="/#who">about me</a>
+    <span class="nav-sep">//</span>
+    <a href="/#work-with-me">work with me</a>
+  </div>
+</nav>
+
+<div class="subpage-hero subpage-hero-zines">
+  <div class="subpage-hero-inner">
+    <span class="section-label">zines // misc zines</span>
+    <h1 class="subpage-title">misc zines</h1>
+    <p class="subpage-intro">I make zines. I love making them collaboratively.</p>
+  </div>
+</div>
+
+<section class="subpage-section">
+  <div class="art-grid">
+    {{ range (where .Site.RegularPages "Section" "misc-zines") }}
+    <div class="art-cell">
+      {{ if .Params.image }}<img src="{{ .Params.image }}" alt="{{ .Title }}">{{ else }}<span class="art-placeholder">✂</span>{{ end }}
+      <div class="art-cell-label">{{ .Title }}</div>
+    </div>
+    {{ else }}
+    <div class="art-cell art-cell-placeholder"><span class="art-placeholder">✂</span><div class="art-cell-label">coming soon</div></div>
+    {{ end }}
+  </div>
+</section>
+
+<footer>
+  <div>
+    <div class="footer-name">elena tayo<span class="dot">.</span></div>
+    <p class="footer-sub">artist // celfwr · wales / cymru</p>
+  </div>
+  <div class="footer-quote">
+    all that you touch you change.<br>all that you change changes you.
+    <cite>octavia e. butler</cite>
+  </div>
+  <p class="copy">© {{ now.Year }} elena tayo</p>
+</footer>
+
+</body>
+</html>

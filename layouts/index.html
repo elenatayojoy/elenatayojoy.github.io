@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="cy-en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>elena tayo — artist // celfwr</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Figtree:ital,wght@0,400;0,600;0,800;1,400;1,600&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<nav>
+  <div class="nav-links">
+    <a href="#latest">latest</a>
+    <span class="nav-sep">//</span>
+    <a href="#art">art</a>
+    <span class="nav-sep">//</span>
+    <a href="#zines">zines</a>
+    <span class="nav-sep">//</span>
+    <a href="#tarot">tarot</a>
+    <span class="nav-sep">//</span>
+    <a href="#who">about me</a>
+    <span class="nav-sep">//</span>
+    <a href="#work-with-me">work with me</a>
+  </div>
+</nav>
+
+<div class="title-bar">
+  <h1>elena tayo</h1>
+  <p class="title-bar-sub">mixed media artist, facilitator, organiser <span class="sep">//</span> artist cyfryngau cymysg, hwylusydd, a threfnydd</p>
+</div>
+
+<div class="gallery-menu">
+  <a class="gblock gblock-latest" href="#latest" data-symbol="✦">
+    <div class="gblock-overlay"></div>
+    <div class="gblock-label">
+      <span class="gblock-title">latest</span>
+      <span class="gblock-welsh">diweddaraf</span>
+    </div>
+    <span class="gblock-arrow">↗</span>
+  </a>
+  <a class="gblock gblock-art" href="#art" data-symbol="◈">
+    <div class="gblock-overlay"></div>
+    <div class="gblock-label">
+      <span class="gblock-title">art</span>
+      <span class="gblock-welsh">celf</span>
+    </div>
+    <span class="gblock-arrow">↗</span>
+  </a>
+  <a class="gblock gblock-zines" href="#zines" data-symbol="✂">
+    <div class="gblock-overlay"></div>
+    <div class="gblock-label">
+      <span class="gblock-title">zines</span>
+      <span class="gblock-welsh">gwneud zines</span>
+    </div>
+    <span class="gblock-arrow">↗</span>
+  </a>
+  <a class="gblock gblock-tarot" href="#tarot" data-symbol="★">
+    <div class="gblock-overlay"></div>
+    <div class="gblock-label">
+      <span class="gblock-title">tarot</span>
+      <span class="gblock-welsh">tarot</span>
+    </div>
+    <span class="gblock-arrow">↗</span>
+  </a>
+  <a class="gblock gblock-who" href="#who" data-symbol="◎">
+    <div class="gblock-overlay"></div>
+    <div class="gblock-label">
+      <span class="gblock-title">about me</span>
+      <span class="gblock-welsh">amdana i</span>
+    </div>
+    <span class="gblock-arrow">↗</span>
+  </a>
+  <a class="gblock gblock-work" href="#work-with-me" data-symbol="◉">
+    <div class="gblock-overlay"></div>
+    <div class="gblock-label">
+      <span class="gblock-title">work with me</span>
+      <span class="gblock-welsh">gweithio â fi</span>
+    </div>
+    <span class="gblock-arrow">↗</span>
+  </a>
+</div>
+
+<!-- LATEST -->
+<section id="latest">
+  <span class="section-label">diweddaraf // latest</span>
+  <h2 class="section-heading">updates + notes</h2>
+  <div class="updates-log">
+    {{ range (where .Site.RegularPages "Section" "latest") }}
+    <div class="update-row">
+      <div class="update-date">{{ .Date.Format "Jan 2006" }}</div>
+      <div class="update-dot"></div>
+      <div class="update-body">
+        <h3>{{ .Title }}</h3>
+        <p>{{ .Description }}</p>
+      </div>
+      <span class="update-chip chip-{{ .Params.tag }}">{{ .Params.tag }}</span>
+    </div>
+    {{ end }}
+  </div>
+</section>
+
+<!-- ART -->
+<section id="art">
+  <span class="section-label">celf // art</span>
+  <h2 class="section-heading">art</h2>
+  <p class="section-blurb">My primary medium is analogue collage, though I love playing with mixed media, print, digital collage, and poetry.</p>
+
+  <div class="subsection">
+    <h3 class="subsection-heading">collage</h3>
+    <div class="art-grid">
+      <div class="art-cell"><span class="art-placeholder">◈</span><div class="art-cell-label">collage work</div></div>
+      <div class="art-cell"><span class="art-placeholder">◉</span><div class="art-cell-label">collage work</div></div>
+      <div class="art-cell"><span class="art-placeholder">◊</span><div class="art-cell-label">collage work</div></div>
+    </div>
+  </div>
+
+  <div class="subsection">
+    <h3 class="subsection-heading">earthseed</h3>
+    <div class="art-grid">
+      <div class="art-cell"><span class="art-placeholder">✦</span><div class="art-cell-label">earthseed project</div></div>
+      <div class="art-cell"><span class="art-placeholder">★</span><div class="art-cell-label">earthseed project</div></div>
+      <div class="art-cell"><span class="art-placeholder">◈</span><div class="art-cell-label">earthseed project</div></div>
+    </div>
+  </div>
+
+  <div class="subsection">
+    <h3 class="subsection-heading">misc</h3>
+    <div class="art-grid">
+      <div class="art-cell"><span class="art-placeholder">⬡</span><div class="art-cell-label">misc work</div></div>
+      <div class="art-cell"><span class="art-placeholder">◎</span><div class="art-cell-label">misc work</div></div>
+      <div class="art-cell"><span class="art-placeholder">✂</span><div class="art-cell-label">misc work</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ZINES -->
+<section id="zines">
+  <span class="section-label">gwneud zines // zines</span>
+  <h2 class="section-heading">zines</h2>
+  <p class="section-blurb">I make zines. I love making them collaboratively.</p>
+
+  <div class="zine-cards">
+    <a class="zine-card zine-card-tarot" href="/tarot-zines">
+      <div class="zine-card-inner">
+        <h3>tarot zines</h3>
+        <p>An annual zine exploring the tarot card of the year, with contributions from friends and community. Each edition weaves together collage, writing, somatics and collective wisdom — a ritual publication rooted in collective care and visioning.</p>
+        <span class="zine-card-link">see all editions →</span>
+      </div>
+    </a>
+    <a class="zine-card zine-card-misc" href="/misc-zines">
+      <div class="zine-card-inner">
+        <h3>misc zines</h3>
+        <p>Other zine work — collaborative, solo, experimental. All made with love and a good pair of scissors.</p>
+        <span class="zine-card-link">see all zines →</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- TAROT -->
+<section id="tarot">
+  <span class="section-label">tarot</span>
+  <h2 class="section-heading">tarot</h2>
+  <p class="section-blurb section-blurb-light">Tarot is a core focus of my work as a perfect space for connection, exploring archetypes and myths, collective storytelling and wayfinding.</p>
+
+  <div class="subsection">
+    <h3 class="subsection-heading subsection-heading-light">monsters &amp; multitudes <span class="subsection-welsh">// gwylltineb &amp; gwagle</span></h3>
+    <div class="art-grid">
+      <div class="art-cell"><span class="art-placeholder">◈</span><div class="art-cell-label">coming soon</div></div>
+      <div class="art-cell"><span class="art-placeholder">★</span><div class="art-cell-label">coming soon</div></div>
+      <div class="art-cell"><span class="art-placeholder">✦</span><div class="art-cell-label">coming soon</div></div>
+    </div>
+  </div>
+
+  <div class="subsection">
+    <h3 class="subsection-heading subsection-heading-light">tarot zines</h3>
+    <div class="tarot-cards">
+      <a class="tarot-card tarot-card-1" href="/tarot-zines">VIII<div class="year">strength · 2024</div></a>
+      <a class="tarot-card tarot-card-2" href="/tarot-zines">✦<div class="year">2023</div></a>
+      <a class="tarot-card tarot-card-3" href="/tarot-zines">◈<div class="year">2022</div></a>
+    </div>
+    <a class="see-all-link" href="/tarot-zines">see all tarot zines →</a>
+  </div>
+</section>
+
+<!-- ABOUT ME -->
+<section id="who">
+  <span class="section-label">amdana i // about me</span>
+  <h2 class="section-heading">about me <span class="heading-welsh">// amdana i</span></h2>
+  <div class="about-text">
+    <p>I'm an artist, facilitator and organiser, with Yoruba and Scottish heritage, living in mid-Wales on the edge of mythical Eryri. Primarily working in collage, mixed media, and zine making, my practice explores questions of how we find rootedness in rocky ground, how we forge and foster the types of relationships, networks and communities that we need in apocalypse, and how we make utopia amongst dystopia. My current inquiry is what Afrocelticfuturism could bring to the polypocalypse: bringing folklore and traditions from across lands and seas into dialogue to find collective pathways to liberation.</p>
+  </div>
+  <div class="about-text about-text-welsh">
+    <p>Artist, hwylusydd a threfnydd ydw i, efo treftadaeth Yoruba ac Albanaidd, yn byw yng nghanol Cymru ar ymyl Eryri hardd a chwedlonol. Gan weithio'n bennaf mewn collage, cyfryngau cymysg, a gwneud zines, mae fy ymarfer yn archwilio sut dyn ni'n dod o hyd i wreiddiau mewn tir creigiog, sut dyn ni'n ffurfio ac yn meithrin y mathau o berthnasoedd, rhwydweithiau a chymunedau sydd eu hangen arnon ni mewn apocalyps, a sut dyn ni'n creu iwtopia ymhlith dystopia. Fy ymchwiliad cyfredol yw beth allai Afroceltddyfodoliaeth ei gynnig i'r polypocalyps: gan ddod â llên gwerin a thraddodiadau o draws tiroedd a moroedd i ddeialog i ddod o hyd i lwybrau cyfunol at ryddhad.</p>
+  </div>
+</section>
+
+<!-- WORK WITH ME -->
+<section id="work-with-me">
+  <span class="section-label">gweithio â fi // work with me</span>
+  <h2 class="work-heading">work<br>with me.</h2>
+  <div class="work-cards">
+    <div class="work-card">
+      <h3>workshops</h3>
+      <p>Participatory and transformative spaces where people bring their full selves into creative, narrative and visioning processes for collective liberation.</p>
+    </div>
+    <div class="work-card">
+      <h3>collage commissions</h3>
+      <p>Bespoke collage work — irl and digital. Get in touch to talk about what you have in mind.</p>
+    </div>
+    <div class="work-card">
+      <h3>zine collaborations</h3>
+      <p>Interested in contributing to a zine, or collaborating on one? I'd love to hear from you.</p>
+    </div>
+  </div>
+  <div class="contact-links">
+    <a class="contact-link" href="mailto:elenatayoisanartist@gmail.com">email <span>→</span></a>
+    <a class="contact-link" href="https://instagram.com/elenatayo" target="_blank">instagram <span>→</span></a>
+  </div>
+</section>
+
+<footer>
+  <div>
+    <div class="footer-name">elena tayo<span class="dot">.</span></div>
+    <p class="footer-sub">artist // celfwr · wales / cymru</p>
+  </div>
+  <div class="footer-quote">
+    all that you touch you change.<br>all that you change changes you.
+    <cite>octavia e. butler</cite>
+  </div>
+  <p class="copy">© {{ now.Year }} elena tayo<br>made with intention.<br>hosted free on github pages.</p>
+</footer>
+
+</body>
+</html>
