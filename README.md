@@ -1,4 +1,4 @@
-# elenatayo.art
+# elenatayojoy
 
 Your website! Built with Hugo, hosted on GitHub Pages.
 
